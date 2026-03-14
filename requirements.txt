@@ -28,10 +28,10 @@ requests==2.31.0
 # PDF processing
 pymupdf==1.23.8
 
-# Vector database - optional, has fallback if not available
-# Try to install faiss-cpu, but app will work without it (uses numpy fallback)
-# For Python 3.14, faiss-cpu may not be available - that's OK, fallback will work
-faiss-cpu>=1.7.4; python_version<"3.14"
+# Vector database
+# Note: FAISS is optional - app has numpy-based fallback
+# If you want FAISS (faster), install manually: pip install faiss-cpu
+# For Streamlit Cloud Python 3.14, FAISS may not be available - fallback works fine
 numpy>=1.24.0
 
 # Utilities
