@@ -47,8 +47,8 @@ class Settings(BaseSettings):
     uhc_policies_url: str = "https://www.uhcprovider.com/en/policies-protocols/commercial-policies/commercial-medical-drug-policies.html"
     
     # API Settings
-    api_host: str = "0.0.0.0"
-    api_port: int = 8000
+    api_host: str = os.getenv("API_HOST", "0.0.0.0")
+    api_port: int = int(os.getenv("PORT", os.getenv("API_PORT", "8000")))  # Railway uses PORT
     
     # Logging
     log_level: str = "INFO"
