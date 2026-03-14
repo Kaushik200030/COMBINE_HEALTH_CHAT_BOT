@@ -8,8 +8,8 @@ pydantic-settings==2.1.0
 streamlit==1.28.1
 
 # Free Embeddings (sentence-transformers)
-# Note: torch will be installed automatically as a dependency
 sentence-transformers==2.2.2
+torch==2.1.0  # Required by sentence-transformers
 
 # Free LLM (optional - choose one)
 # Option 1: Ollama (recommended - easiest)
@@ -23,16 +23,14 @@ accelerate==0.24.1
 # Web scraping and parsing
 beautifulsoup4==4.12.2
 requests==2.31.0
-# lxml removed - BeautifulSoup uses built-in html.parser (no system dependencies needed)
+lxml==4.9.3
 
 # PDF processing
 pymupdf==1.23.8
 
 # Vector database
-# Note: FAISS is optional - app has numpy-based fallback
-# If you want FAISS (faster), install manually: pip install faiss-cpu
-# For Streamlit Cloud Python 3.14, FAISS may not be available - fallback works fine
-numpy>=1.24.0
+faiss-cpu==1.7.4
+numpy==1.24.3
 
 # Utilities
 python-dotenv==1.0.0
