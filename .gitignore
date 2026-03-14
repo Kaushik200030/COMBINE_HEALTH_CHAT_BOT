@@ -37,14 +37,10 @@ ENV/
 .env
 .env.local
 
-# Data directories (uncomment to exclude from git)
-# data/
-# *.pdf
-# *.html
-
-# But keep processed data and vector DB for deployment
-!data/processed/
-!data/index/
+# Data directories
+data/
+*.pdf
+*.html
 
 # Vector database
 *.index

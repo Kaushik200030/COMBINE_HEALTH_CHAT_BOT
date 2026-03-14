@@ -12,11 +12,8 @@ class Settings(BaseSettings):
     # Note: embedding_dimension is auto-detected from model, but we set default for FAISS
     embedding_dimension: int = int(os.getenv("EMBEDDING_DIMENSION", "384"))  # Default for all-MiniLM-L6-v2
     
-    # LLM Settings (Free - Ollama or Hugging Face)
-    # Default to "huggingface" for cloud compatibility, "ollama" for local
-    # Cloud platforms: Set LLM_PROVIDER=huggingface
-    # Local with Ollama: Set LLM_PROVIDER=ollama (or leave default if Ollama is running)
-    llm_provider: str = os.getenv("LLM_PROVIDER", "huggingface")  # "ollama" or "huggingface"
+    # LLM Settings (Free - Ollama)
+    llm_provider: str = os.getenv("LLM_PROVIDER", "ollama")  # "ollama" or "huggingface"
     ollama_base_url: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     ollama_model: str = os.getenv("OLLAMA_MODEL", "llama3.2")  # or "mistral", "phi3", etc.
     
@@ -47,8 +44,8 @@ class Settings(BaseSettings):
     uhc_policies_url: str = "https://www.uhcprovider.com/en/policies-protocols/commercial-policies/commercial-medical-drug-policies.html"
     
     # API Settings
-    api_host: str = os.getenv("API_HOST", "0.0.0.0")
-    api_port: int = int(os.getenv("PORT", os.getenv("API_PORT", "8000")))  # Railway uses PORT
+    api_host: str = "0.0.0.0"
+    api_port: int = 8000
     
     # Logging
     log_level: str = "INFO"

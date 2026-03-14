@@ -13,18 +13,11 @@ This chatbot uses **completely free, open-source components**:
 
 See [FREE_SETUP.md](FREE_SETUP.md) for detailed setup instructions.
 
-## 🚀 Deployment
+## 🚀 Hosted Application
 
-**Ready to deploy?** See [QUICK_DEPLOY.md](QUICK_DEPLOY.md) for the fastest deployment guide!
+**URL:** [Add your deployed URL here]
 
-### Deployment Options
-
-- **Streamlit Cloud** (Easiest) - [Guide](DEPLOY_STREAMLIT_CLOUD.md)
-- **Railway** (Best Performance) - [Guide](DEPLOY_RAILWAY.md)  
-- **Render** (Good Free Tier) - [Guide](DEPLOY_RENDER.md)
-- **Complete Guide** - [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
-
-**Note:** For cloud deployment, use Hugging Face instead of Ollama (Ollama doesn't work on cloud platforms).
+**Note:** The application is currently set up for local deployment. See deployment instructions below.
 
 ## 📋 Table of Contents
 
