@@ -9,7 +9,8 @@ streamlit==1.28.1
 
 # Free Embeddings (sentence-transformers)
 sentence-transformers==2.2.2
-torch==2.1.0  # Required by sentence-transformers
+# Note: torch version will be auto-resolved by sentence-transformers
+# For Streamlit Cloud compatibility, we let it choose the right version
 
 # Free LLM (optional - choose one)
 # Option 1: Ollama (recommended - easiest)
@@ -30,7 +31,7 @@ pymupdf==1.23.8
 
 # Vector database
 faiss-cpu==1.7.4
-numpy==1.24.3
+numpy>=1.24.0  # Flexible version for compatibility
 
 # Utilities
 python-dotenv==1.0.0
