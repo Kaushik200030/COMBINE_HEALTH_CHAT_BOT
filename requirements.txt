@@ -23,14 +23,15 @@ accelerate==0.24.1
 # Web scraping and parsing
 beautifulsoup4==4.12.2
 requests==2.31.0
-lxml==4.9.3
+# lxml removed - BeautifulSoup uses built-in html.parser (no system dependencies needed)
 
 # PDF processing
 pymupdf==1.23.8
 
-# Vector database
-faiss-cpu==1.7.4
-numpy>=1.24.0  # Flexible version for compatibility
+# Vector database - flexible version for Python 3.14 compatibility
+# If faiss-cpu fails, try: pip install faiss-cpu --no-cache-dir
+faiss-cpu>=1.7.4
+numpy>=1.24.0
 
 # Utilities
 python-dotenv==1.0.0
