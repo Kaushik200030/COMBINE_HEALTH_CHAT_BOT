@@ -8,9 +8,8 @@ pydantic-settings==2.1.0
 streamlit==1.28.1
 
 # Free Embeddings (sentence-transformers)
+# Note: torch will be installed automatically as a dependency
 sentence-transformers==2.2.2
-# Note: torch version will be auto-resolved by sentence-transformers
-# For Streamlit Cloud compatibility, we let it choose the right version
 
 # Free LLM (optional - choose one)
 # Option 1: Ollama (recommended - easiest)
