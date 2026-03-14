@@ -28,9 +28,10 @@ requests==2.31.0
 # PDF processing
 pymupdf==1.23.8
 
-# Vector database - flexible version for Python 3.14 compatibility
-# If faiss-cpu fails, try: pip install faiss-cpu --no-cache-dir
-faiss-cpu>=1.7.4
+# Vector database - optional, has fallback if not available
+# Try to install faiss-cpu, but app will work without it (uses numpy fallback)
+# For Python 3.14, faiss-cpu may not be available - that's OK, fallback will work
+faiss-cpu>=1.7.4; python_version<"3.14"
 numpy>=1.24.0
 
 # Utilities
